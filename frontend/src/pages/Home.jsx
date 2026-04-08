@@ -11,13 +11,13 @@ const Home = () => {
   const [activeCategory, setActiveCategory] = useState("Gym Foods");
 
   return (
-    <div>
+    <div className="pt-[120px]">
       <HeroSection />
       <CategoryBar
         activeCategory={activeCategory}
         onCategoryChange={setActiveCategory}
       />
-       <ProductGrid activeCategory={activeCategory} />
+      <ProductGrid activeCategory={activeCategory} />
       <WhyKapiva />
       <NewArrivals />
       <LearnAyurveda />

@@ -219,7 +219,7 @@ const AppRoutes = () => {
 
       {/* User Dashboard — protected */}
       <Route
-        path="/dash"
+        path="/user"
         element={
           <ProtectedRoute>
             <DashboardLayout />

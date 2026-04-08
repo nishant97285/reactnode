@@ -23,7 +23,7 @@ const Login = () => {
     try {
       setLoading(true);
       await login(form.email, form.password);
-      navigate("/dash");
+      navigate("/user");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed. Try again.");
     } finally {
@@ -32,7 +32,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f7f7f5] font-sans">
+    <div className="min-h-screen bg-[#f7f7f5] font-sans pt-[120px]">
 
       {/* Back Button */}
       <div className="flex items-center px-4 pt-4">
@@ -115,7 +115,7 @@ const Login = () => {
           <p className="text-sm text-gray-500 mt-5">
             Don’t have an account? {" "}
             <Link to="/register" className="text-[#5a7a2e] font-semibold hover:underline">
-              Register 
+              Register
             </Link>
           </p>
         </div>
@@ -138,7 +138,7 @@ const Login = () => {
 
           <a href="#" className="flex items-center gap-3 bg-black text-white rounded-lg px-4 py-2.5 w-48 mb-2.5 hover:bg-gray-800 transition-colors">
             <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 shrink-0">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
             </svg>
             <div className="flex flex-col leading-tight">
               <span className="text-[10px] opacity-75">Download on the</span>
@@ -148,7 +148,7 @@ const Login = () => {
 
           <a href="#" className="flex items-center gap-3 bg-black text-white rounded-lg px-4 py-2.5 w-48 hover:bg-gray-800 transition-colors">
             <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 shrink-0">
-              <path d="M3.18 23.76c.3.17.64.24.99.19l13.5-11.7-2.96-2.96-11.53 14.47zM.5 1.4C.19 1.75 0 2.28 0 2.96v18.08c0 .68.19 1.21.51 1.56l.08.08 10.12-10.12v-.24L.58 1.32.5 1.4zM22.29 10.63l-2.89-1.65-3.24 3.24 3.24 3.24 2.91-1.66c.83-.47.83-1.24-.02-1.17zM3.18.24L16.71 11.95l-2.96 2.96L.19.43C.49-.15.85-.04 1.19.08L3.18.24z"/>
+              <path d="M3.18 23.76c.3.17.64.24.99.19l13.5-11.7-2.96-2.96-11.53 14.47zM.5 1.4C.19 1.75 0 2.28 0 2.96v18.08c0 .68.19 1.21.51 1.56l.08.08 10.12-10.12v-.24L.58 1.32.5 1.4zM22.29 10.63l-2.89-1.65-3.24 3.24 3.24 3.24 2.91-1.66c.83-.47.83-1.24-.02-1.17zM3.18.24L16.71 11.95l-2.96 2.96L.19.43C.49-.15.85-.04 1.19.08L3.18.24z" />
             </svg>
             <div className="flex flex-col leading-tight">
               <span className="text-[10px] opacity-75">GET IT ON</span>

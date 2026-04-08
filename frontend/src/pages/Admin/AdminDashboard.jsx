@@ -49,7 +49,7 @@ useEffect(() => {
       localStorage.setItem("kapiva_user", JSON.stringify(data.user));
       localStorage.setItem("impersonating", "true");
       localStorage.setItem("admin_token_backup", localStorage.getItem("admin_token"));
-      navigate("/dash");
+      navigate("/user");
     } catch (err) {
       alert(err.response?.data?.message || "Impersonation failed.");
     } finally {

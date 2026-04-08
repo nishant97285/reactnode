@@ -5,41 +5,41 @@ const menuItems = [
   {
     label: "Profile", icon: "👤",
     children: [
-      { label: "Edit Profile",     path: "/dash/profile/edit" },
-      { label: "Change Password",  path: "/dash/profile/password" },
+      { label: "Edit Profile",     path: "/user/profile/edit" },
+      { label: "Change Password",  path: "/user/profile/password" },
     ],
   },
   {
     label: "Team", icon: "👥",
     children: [
-      { label: "Direct Team", path: "/dash/team/direct" },
-      { label: "All Team",    path: "/dash/team/all" },
+      { label: "Direct Team", path: "/user/team/direct" },
+      { label: "All Team",    path: "/user/team/all" },
     ],
   },
   {
     label: "Activation", icon: "⚡",
     children: [
-      { label: "Activate ID", path: "/dash/activation/activate" },
-      { label: "History",     path: "/dash/activation/history" },
+      { label: "Activate ID", path: "/user/activation/activate" },
+      { label: "History",     path: "/user/activation/history" },
     ],
   },
   {
     label: "Income", icon: "💰",
     children: [
-      { label: "All Income",      path: "/dash/income/all" },
-      { label: "Referral Income", path: "/dash/income/referral" },
+      { label: "All Income",      path: "/user/income/all" },
+      { label: "Referral Income", path: "/user/income/referral" },
     ],
   },
   {
     label: "Withdraw", icon: "🏦",
     children: [
-      { label: "Withdrawal",         path: "/dash/withdraw/request" },
-      { label: "Withdrawal History", path: "/dash/withdraw/history" },
+      { label: "Withdrawal",         path: "/user/withdraw/request" },
+      { label: "Withdrawal History", path: "/user/withdraw/history" },
     ],
   },
   {
     label: "Support", icon: "🎧",
-    children: [{ label: "Support", path: "/dash/support" }],
+    children: [{ label: "Support", path: "/user/support" }],
   },
 ];
 
@@ -95,7 +95,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       {/* Nav */}
       <nav className="flex-1 flex flex-col gap-0.5 px-2.5">
         <NavLink
-          to="/dash"
+          to="/user"
           end
           className={({ isActive }) =>
             `flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm font-medium transition-all ${

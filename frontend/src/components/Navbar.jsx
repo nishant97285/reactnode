@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom"; 
+import { Link, useLocation } from "react-router-dom";
 import { useScroll } from "../hooks/useScroll";
 import SideDrawer from "./SideDrawer";
 
@@ -21,9 +21,8 @@ const mobileCategories = [
 ];
 
 const Navbar = () => {
-  const location = useLocation();
   const isHomePage = location.pathname === "/";
-  const isDashboard = location.pathname.startsWith("/dash");
+  const isDashboard = location.pathname.startsWith("/user");
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -36,17 +35,15 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
-          scrolled ? "shadow-md" : "shadow-sm"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? "shadow-md" : "shadow-sm"
+          }`}
       >
         {/* PROMO BANNER */}
         <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${
-            bannerVisible
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${bannerVisible
               ? "max-h-16 opacity-100"
               : "max-h-0 opacity-0 pointer-events-none"
-          }`}
+            }`}
           style={{
             backgroundImage: `url(${promoBg})`,
             backgroundSize: "cover",
@@ -82,37 +79,34 @@ const Navbar = () => {
         <div className="md:hidden">
           {/* Top Row: Hamburger + Brand + Icons */}
           <div className="flex items-center justify-between px-3 py-3">
-           {/* Hamburger Button */}
-<button
-  onClick={() => setMenuOpen(!menuOpen)}
-  className="flex flex-col gap-1.5 p-1"
->
-  <span
-    className={`block w-5 h-0.5 bg-gray-700 transform transition-all duration-600 ease-out ${
-      menuOpen ? "rotate-45 translate-y-2" : ""
-    }`}
-  />
-  <span
-    className={`block w-5 h-0.5 bg-gray-700 transform transition-all duration-600 ease-out ${
-      menuOpen ? "opacity-0" : ""
-    }`}
-  />
-  <span
-    className={`block w-5 h-0.5 bg-gray-700 transform transition-all duration-600 ease-out ${
-      menuOpen ? "-rotate-45 -translate-y-2" : ""
-    }`}
-  />
-</button>
+            {/* Hamburger Button */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="flex flex-col gap-1.5 p-1"
+            >
+              <span
+                className={`block w-5 h-0.5 bg-gray-700 transform transition-all duration-600 ease-out ${menuOpen ? "rotate-45 translate-y-2" : ""
+                  }`}
+              />
+              <span
+                className={`block w-5 h-0.5 bg-gray-700 transform transition-all duration-600 ease-out ${menuOpen ? "opacity-0" : ""
+                  }`}
+              />
+              <span
+                className={`block w-5 h-0.5 bg-gray-700 transform transition-all duration-600 ease-out ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
+              />
+            </button>
 
             <div className="bg-black text-white font-black text-base px-3 py-1.5 tracking-widest rounded">
-             <Link to="/">KAPIVA</Link>
+              <Link to="/">KAPIVA</Link>
             </div>
 
             <div className="flex items-center gap-1">
               <button className="text-gray-700 text-xl p-1.5">🔍</button>
               <button className="text-gray-700 text-xl p-1.5">🚚</button>
               <Link
-                to="/dash"
+                to="/user"
                 className="text-gray-700 text-xl p-1.5"
                 title="dashboard"
               >
@@ -180,7 +174,7 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-4 h-18 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3 shrink-0">
               <div className="bg-black text-white font-black text-lg px-3 py-1.5 tracking-widest rounded">
-               <Link to="/">KAPIVA</Link>
+                <Link to="/">KAPIVA</Link>
               </div>
               <div className="text-[10px] text-gray-500 leading-tight">
                 <div className="flex items-center gap-1">
@@ -235,9 +229,9 @@ const Navbar = () => {
                   REGISTER
                 </Link>
               </div>
-
+              238:
               <Link
-                to="/dash"
+                to="/dashboard"
                 className="text-gray-600 hover:text-black p-2 text-xl rounded-full hover:bg-gray-100 transition-colors"
               >
                 👤
@@ -259,19 +253,16 @@ const Navbar = () => {
                 className="flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <span
-                  className={`block w-5 h-0.5 bg-gray-700 transition-all duration-300 ${
-                    menuOpen ? "rotate-45 translate-y-2" : ""
-                  }`}
+                  className={`block w-5 h-0.5 bg-gray-700 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""
+                    }`}
                 />
                 <span
-                  className={`block w-5 h-0.5 bg-gray-700 transition-all duration-300 ${
-                    menuOpen ? "opacity-0" : ""
-                  }`}
+                  className={`block w-5 h-0.5 bg-gray-700 transition-all duration-300 ${menuOpen ? "opacity-0" : ""
+                    }`}
                 />
                 <span
-                  className={`block w-5 h-0.5 bg-gray-700 transition-all duration-300 ${
-                    menuOpen ? "-rotate-45 -translate-y-2" : ""
-                  }`}
+                  className={`block w-5 h-0.5 bg-gray-700 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+                    }`}
                 />
               </button>
             </div>
