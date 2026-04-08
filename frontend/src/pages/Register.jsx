@@ -59,7 +59,7 @@ const Register = () => {
     <div className="min-h-screen bg-[#f7f7f5] font-sans pt-[120px]">
 
       {/* Back Button */}
-      <div className="flex items-center px-4 pt-4">
+      {/* <div className="flex items-center px-4 pt-4">
         <button
           onClick={() => navigate("/")}
           className="flex items-center gap-1 text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors"
@@ -70,7 +70,7 @@ const Register = () => {
           </svg>
           Back
         </button>
-      </div>
+    </div>
 
       {/* Green Arc Section */}
       <div

@@ -21,8 +21,10 @@ const mobileCategories = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
   const isHomePage = location.pathname === "/";
-  const isDashboard = location.pathname.startsWith("/user");
+  const isDashboard = location.pathname.startsWith("/user") || location.pathname.startsWith("/admin");
+  const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,8 +43,8 @@ const Navbar = () => {
         {/* PROMO BANNER */}
         <div
           className={`overflow-hidden transition-all duration-500 ease-in-out ${bannerVisible
-              ? "max-h-16 opacity-100"
-              : "max-h-0 opacity-0 pointer-events-none"
+            ? "max-h-16 opacity-100"
+            : "max-h-0 opacity-0 pointer-events-none"
             }`}
           style={{
             backgroundImage: `url(${promoBg})`,
@@ -229,7 +231,7 @@ const Navbar = () => {
                   REGISTER
                 </Link>
               </div>
-              238:
+              {/* 238: */}
               <Link
                 to="/dashboard"
                 className="text-gray-600 hover:text-black p-2 text-xl rounded-full hover:bg-gray-100 transition-colors"
